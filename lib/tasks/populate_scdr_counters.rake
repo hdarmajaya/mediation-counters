@@ -1,6 +1,6 @@
 namespace :db do
-  desc 'Load GCDR sample entries in database'
-  task :load_gcdr_counters => :environment do
+  desc 'Load SCDR sample entries in database'
+  task :load_scdr_counters => :environment do
     require 'securerandom'
 
     def random_count
@@ -10,9 +10,9 @@ namespace :db do
     def random_filename
       "#{SecureRandom.hex}.gz"
     end
-  
+
     # Delete data
-    GcdrCounter.delete_all
+    ScdrCounter.delete_all
 
     #start_date = Date.today.beginning_of_year
     start_date = Date.today - 70
@@ -34,9 +34,10 @@ namespace :db do
           zero_count = random_count
           min_count = random_count
           prev_count = random_count
-          in_count = out_count + rin_count + rout_count + aggr_count + mal_count + mis_count + zero_count + min_count + prev_count
+          cfc_count = random_count
+          in_count = out_count + rin_count + rout_count + aggr_count + mal_count + mis_count + zero_count + min_count + prev_count + cfc_count
 
-          GcdrCounter.create!(filename: filename,
+          ScdrCounter.create!(filename: filename,
                               date_and_hour: calltime,
                               input: in_count,
                               output: out_count,
@@ -47,7 +48,8 @@ namespace :db do
                               missing_data: mis_count,
                               zero_value: zero_count,
                               min_too_low: min_count,
-                              prev_processed: prev_count)
+                              prev_processed: prev_count,
+                              cause_for_closing: cfc_count)
         end
       end
     end
