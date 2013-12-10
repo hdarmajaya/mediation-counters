@@ -4,6 +4,7 @@ class GcdrCounterController < ApplicationController
     begin
       if params[:start_date].blank? and params[:search_gcdr_filename].blank?
         @date = DateTime.now.beginning_of_week
+        flash.now[:notice] = "Default to current week."
       elsif params[:start_date].blank?
         filedate = GcdrCounter.get_date(params[:search_gcdr_filename])
         @date = Date.parse(filedate.to_s).beginning_of_week
@@ -11,6 +12,7 @@ class GcdrCounterController < ApplicationController
         @date = Date.parse(params[:start_date]).beginning_of_week
       end
     rescue
+      flash[:error] = "Invalid date. " + params[:start_date].to_s
       redirect_to(:action => 'index')
       return
     end
