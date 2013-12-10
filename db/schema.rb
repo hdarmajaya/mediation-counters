@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131210024902) do
+ActiveRecord::Schema.define(:version => 20131210025507) do
 
   create_table "gcdr_counters", :force => true do |t|
     t.string   "filename"
@@ -25,8 +25,27 @@ ActiveRecord::Schema.define(:version => 20131210024902) do
     t.integer  "missing_data"
     t.integer  "zero_value"
     t.integer  "min_too_low"
+    t.integer  "prev_processed"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "scdr_counters", :force => true do |t|
+    t.string   "filename"
+    t.datetime "date_and_hour"
+    t.integer  "input"
+    t.integer  "output"
+    t.integer  "recycled_in"
+    t.integer  "recycled_out"
+    t.integer  "aggregated"
+    t.integer  "malformed_data"
+    t.integer  "missing_data"
+    t.integer  "zero_value"
+    t.integer  "min_too_low"
+    t.integer  "cause_for_closing"
+    t.integer  "prev_processed"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
 end

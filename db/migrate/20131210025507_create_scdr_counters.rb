@@ -1,6 +1,6 @@
-class CreateGcdrCounters < ActiveRecord::Migration
+class CreateScdrCounters < ActiveRecord::Migration
   def change
-    create_table :gcdr_counters do |t|
+    create_table :scdr_counters do |t|
       t.string :filename
       t.datetime :date_and_hour
       t.integer :input
@@ -12,6 +12,7 @@ class CreateGcdrCounters < ActiveRecord::Migration
       t.integer :missing_data
       t.integer :zero_value
       t.integer :min_too_low
+      t.integer :cause_for_closing
       t.integer :prev_processed
 
       t.timestamps

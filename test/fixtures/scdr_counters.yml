@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  filename: MyString
+  date_and_hour: 2013-12-09 21:55:07
+  input: 1
+  output: 1
+  recycled_in: 1
+  recycled_out: 1
+  aggregated: 1
+  malformed_data: 1
+  missing_data: 1
+  zero_value: 1
+  min_too_low: 1
+  cause_for_closing: 1
+  prev_processed: 1
+
+two:
+  filename: MyString
+  date_and_hour: 2013-12-09 21:55:07
+  input: 1
+  output: 1
+  recycled_in: 1
+  recycled_out: 1
+  aggregated: 1
+  malformed_data: 1
+  missing_data: 1
+  zero_value: 1
+  min_too_low: 1
+  cause_for_closing: 1
+  prev_processed: 1
