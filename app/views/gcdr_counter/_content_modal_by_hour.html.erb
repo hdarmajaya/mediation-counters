@@ -13,10 +13,14 @@
               <th>Hour</th>
               <th>Input</th>
               <th>Output</th>
+              <th>ReIn</th>
+              <th>ReOut</th>
+              <th>Aggr</th>
               <th>Malformed</th>
               <th>Missing</th>
-              <th>ZeroValue</th>
-              <th>MinTooLow</th>
+              <th>Zero</th>
+              <th>MinLow</th>
+              <th>Prev</th>
             </tr>
           </thead>
           <tbody>
@@ -26,10 +30,14 @@
               <td><%= hc.hour %></td>
               <td><%= number_with_delimiter(hc.sum_input, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(hc.sum_output, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(hc.sum_recycled_in, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(hc.sum_recycled_out, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(hc.sum_aggregated, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(hc.sum_malformed_data, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(hc.sum_missing_data, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(hc.sum_zero_value, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(hc.sum_min_too_low, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(hc.sum_prev_processed, :delimiter => ",") %></td>
             </tr>
             <% end %>
           </tbody>

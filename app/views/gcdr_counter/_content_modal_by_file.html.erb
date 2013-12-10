@@ -14,10 +14,14 @@
               <th>Filename</th>
               <th>Input</th>
               <th>Output</th>
+              <th>ReIn</th>
+              <th>ReOut</th>
+              <th>Aggr</th>
               <th>Malformed</th>
               <th>Missing</th>
-              <th>ZeroValue</th>
-              <th>MinTooLow</th>
+              <th>Zero</th>
+              <th>MinLow</th>
+              <th>Prev</th>
             </tr>
           </thead>
           <tbody>
@@ -28,10 +32,14 @@
               <td><%= fc.file %></td>
               <td><%= number_with_delimiter(fc.sum_input, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(fc.sum_output, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(fc.sum_recycled_in, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(fc.sum_recycled_out, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(fc.sum_aggregated, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(fc.sum_malformed_data, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(fc.sum_missing_data, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(fc.sum_zero_value, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(fc.sum_min_too_low, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(fc.sum_prev_processed, :delimiter => ",") %></td>
             </tr>
             <% end %>
           </tbody>
