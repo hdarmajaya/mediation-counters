@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.datepicker
 //= require bootstrap
 //= require_tree .
+
+$(function () {
+  $('#start_date').datepicker({ dateFormat: 'yy-mm-dd' });
+});

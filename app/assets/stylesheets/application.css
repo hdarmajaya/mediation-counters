@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require_tree .
+ *= require jquery.ui.datepicker
  */
 tr { font-size: 10pt }
