@@ -34,6 +34,9 @@ class GcdrCounter < ActiveRecord::Base
     GcdrCounter.where(filename: file).limit(1).pluck(:date_and_hour)
   end
 
+  def self.success_rate(from,to)
+  end
+
   def self.by_day(from, to, filename)
     select("date(date_and_hour) as calldate,
             sum(input) as sum_input,

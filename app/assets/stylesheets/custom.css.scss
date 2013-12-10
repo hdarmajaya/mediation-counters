@@ -1,6 +1,10 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.progress {
+  margin-bottom: 5px;
+}
+
 .modal-body {
   position: relative;
   overflow-y: auto;

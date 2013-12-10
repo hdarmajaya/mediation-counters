@@ -10,6 +10,42 @@
         <li><%= link_to "Scdr Counters", scdr_counter_index_path %></li>
     </div>
     <div class="col-md-10">
+      <table class="table table-condensed table-striped active">
+        <thead>
+          <tr>
+            <th width="20%">Model Name</th>
+            <th>Current Week Success vs. Failed Ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GCDR Counters</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" style="width: <%= @gcdr_success_percentage %>%">
+                  <%= @gcdr_success_percentage %>%
+                </div>
+                <div class="progress-bar progress-bar-danger" style="width: <%= @gcdr_fail_percentage %>%">
+                  <%= @gcdr_fail_percentage %>%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>SCDR Counters</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" style="width: <%= @scdr_success_percentage %>%">
+                  <%= @scdr_success_percentage %>%
+                </div>
+                <div class="progress-bar progress-bar-danger" style="width: <%= @scdr_fail_percentage %>%">
+                  <%= @scdr_fail_percentage %>%
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
