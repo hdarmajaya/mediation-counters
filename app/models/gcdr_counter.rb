@@ -25,6 +25,15 @@ class GcdrCounter < ActiveRecord::Base
     :output, :recycled_in, :recycled_out, :zero_value,
     :prev_processed
 
+  def self.terms_for(file)
+    suggestions = where("filename like ?", "%#{file}%")
+    suggestions.order("filename desc").limit(10).pluck(:filename)
+  end
+
+  def self.get_date(file)
+    GcdrCounter.where(filename: file).limit(1).pluck(:date_and_hour)
+  end
+
   def self.by_day(from, to, filename)
     select("date(date_and_hour) as calldate,
             sum(input) as sum_input,

@@ -11,5 +11,6 @@
  *= require_self
  *= require_tree .
  *= require jquery.ui.datepicker
+ *= require jquery.ui.autocomplete
  */
 tr { font-size: 10pt }

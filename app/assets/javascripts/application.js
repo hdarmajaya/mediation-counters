@@ -13,9 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.datepicker
+//= require jquery.ui.autocomplete
 //= require bootstrap
 //= require_tree .
 
 $(function () {
   $('#start_date').datepicker({ dateFormat: 'yy-mm-dd' });
+  $('#search_gcdr_filename').autocomplete({ source: "/search_gcdr_suggestion/index" });
+  $('#search_scdr_filename').autocomplete({ source: "/search_scdr_suggestion/index" });
 });
