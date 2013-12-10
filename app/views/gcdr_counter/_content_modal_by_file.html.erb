@@ -26,8 +26,8 @@
             <tr>
               <td><%= fc.hour %></td>
               <td><%= fc.file %></td>
-              <td><%= number_with_delimiter(fc.sum_records_in, :delimiter => ",") %></td>
-              <td><%= number_with_delimiter(fc.sum_records_out, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(fc.sum_input, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(fc.sum_output, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(fc.sum_malformed_data, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(fc.sum_missing_data, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(fc.sum_zero_value, :delimiter => ",") %></td>

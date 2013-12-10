@@ -45,7 +45,7 @@ class GcdrCounter < ActiveRecord::Base
 
   def self.by_hour(from, to, filename)
     select("date(date_and_hour) as calldate,
-            strftime('%H', calltime) as hour,
+            strftime('%H', date_and_hour) as hour,
             sum(input) as sum_input,
             sum(output) as sum_output,
             sum(recycled_in) as sum_recycled_in,
@@ -64,7 +64,7 @@ class GcdrCounter < ActiveRecord::Base
 
   def self.by_file(from, to, filename)
     select("date(date_and_hour) as calldate,
-            strftime('%H', calltime) as hour,
+            strftime('%H', date_and_hour) as hour,
             filename as file,
             sum(input) as sum_input,
             sum(output) as sum_output,

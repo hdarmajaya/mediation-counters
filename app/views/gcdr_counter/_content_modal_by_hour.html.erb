@@ -24,8 +24,8 @@
             <% hourly_data.each do |hc| %>
             <tr>
               <td><%= hc.hour %></td>
-              <td><%= number_with_delimiter(hc.sum_records_in, :delimiter => ",") %></td>
-              <td><%= number_with_delimiter(hc.sum_records_out, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(hc.sum_input, :delimiter => ",") %></td>
+              <td><%= number_with_delimiter(hc.sum_output, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(hc.sum_malformed_data, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(hc.sum_missing_data, :delimiter => ",") %></td>
               <td><%= number_with_delimiter(hc.sum_zero_value, :delimiter => ",") %></td>
