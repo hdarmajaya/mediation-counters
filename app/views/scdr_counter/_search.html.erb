@@ -1,0 +1,10 @@
+<%= form_tag(scdr_counter_index_path, method: "get") do %>
+  <%= label_tag("Date: ") %>
+  <%= text_field_tag :start_date %>
+  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  <%= label_tag("Filename:") %>
+  <%= text_field_tag :search_filename, nil, placeholder:'Type filename' %>
+  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  <%= submit_tag "Search", :class => "btn btn-primary btn-sm" %>
+  <br><br>
+<% end %>
