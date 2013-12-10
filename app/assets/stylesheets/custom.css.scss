@@ -1,4 +1,23 @@
 @import "bootstrap";
+@import "font-awesome";
+
+.modal-body {
+  position: relative;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 20px;
+}
+
+.modal-dialog {
+  width: 900px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.background {
+  background-color: #E0E0E0;
+  text-align: center;
+}
 
 /* universal */
 

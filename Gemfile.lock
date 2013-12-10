@@ -44,6 +44,8 @@ GEM
     coffee-script-source (1.6.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    font-awesome-rails (4.0.3.0)
+      railties (>= 3.2, < 5.0)
     hike (1.2.3)
     i18n (0.6.9)
     journey (1.0.4)
@@ -115,6 +117,7 @@ DEPENDENCIES
   annotate (>= 2.5.0)
   bootstrap-sass (~> 3.0.2.0)
   coffee-rails (~> 3.2.1)
+  font-awesome-rails
   jquery-rails
   rails (= 3.2.15)
   sass-rails (~> 3.2.3)

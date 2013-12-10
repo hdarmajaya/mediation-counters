@@ -1,0 +1,2 @@
+module ScdrCounterHelper
+end

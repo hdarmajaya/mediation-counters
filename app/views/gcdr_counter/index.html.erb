@@ -1,4 +1,4 @@
-<% provide(:title, 'Dashboard') %>
+<% provide(:title, 'GcdrCounters') %>
 <div class="container">
   <div class="row">
     <h1>Mediation Counters</h1>
@@ -10,6 +10,7 @@
         <li><%= link_to "Scdr Counters", scdr_counter_index_path %></li>
     </div>
     <div class="col-md-8">
+      <%= render "content" %>
     </div>
     <div class="col-md-1"></div>
   </div>
