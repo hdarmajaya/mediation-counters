@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: cgf_counters
+#
+#  id         :integer          not null, primary key
+#  filename   :string(255)
+#  date_hour  :datetime
+#  input      :integer
+#  output     :integer
+#  merged     :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  filename: MyString
+  date_hour: 2013-12-11 09:01:40
+  input: 1
+  output: 1
+  merged: 1
+
+two:
+  filename: MyString
+  date_hour: 2013-12-11 09:01:40
+  input: 1
+  output: 1
+  merged: 1

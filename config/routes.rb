@@ -1,4 +1,8 @@
 MediationCounters::Application.routes.draw do
+  get "search_cgf_suggestion/index"
+
+  get "cgf_counter/index"
+
   get "search_suggestion/index"
 
   get "search_scdr_suggestion/index"

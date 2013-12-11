@@ -1,0 +1,2 @@
+module CgfCounterHelper
+end

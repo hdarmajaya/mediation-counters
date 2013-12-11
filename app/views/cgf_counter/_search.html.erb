@@ -1,0 +1,6 @@
+<%= form_tag(cgf_counter_index_path, method: "get") do %>
+  <%= text_field_tag :start_date, nil, placeholder:'Choose a date' %>
+  <%= text_field_tag :search_cgf_filename, nil, placeholder:'Type filename' %>
+  <%= submit_tag "Search", :class => "btn btn-primary btn-sm" %>
+  <br><br>
+<% end %>

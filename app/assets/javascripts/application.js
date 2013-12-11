@@ -19,6 +19,7 @@
 
 $(function () {
   $('#start_date').datepicker({ dateFormat: 'yy-mm-dd' });
+  $('#search_cgf_filename').autocomplete({ source: "/search_cgf_suggestion/index" });
   $('#search_gcdr_filename').autocomplete({ source: "/search_gcdr_suggestion/index" });
   $('#search_scdr_filename').autocomplete({ source: "/search_scdr_suggestion/index" });
 });

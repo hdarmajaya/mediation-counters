@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131210025507) do
+ActiveRecord::Schema.define(:version => 20131211140140) do
+
+  create_table "cgf_counters", :force => true do |t|
+    t.string   "filename"
+    t.datetime "date_hour"
+    t.integer  "input"
+    t.integer  "output"
+    t.integer  "merged"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "gcdr_counters", :force => true do |t|
     t.string   "filename"

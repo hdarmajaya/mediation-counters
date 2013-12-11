@@ -1,0 +1,51 @@
+<table class="table table-striped table-rounded table-bordered">
+  <thead>
+    <tr>
+      <th colspan="5"><center>CGF Counters</center></th>
+    </tr>
+    <tr>
+      <th class="background" colspan="5">
+        <%= link_to (fa_icon "arrow-left"), :start_date => (@date.beginning_of_week-1) %>
+        &nbsp &nbsp &nbsp
+        Week # <%= @current_week %>
+        &nbsp &nbsp &nbsp
+        <%= link_to (fa_icon "arrow-right"), :start_date => (@date.end_of_week+1) %>
+      </th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Day</th>
+      <th>Input</th>
+      <th>Output</th>
+      <th>Merged</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td class="background" colspan="5">
+        <div style="float:left">
+          <%= link_to "Previous Week", :start_date => (@date.beginning_of_week-1) %>
+        </div>
+        <div style="float:right">
+          <%= link_to "Next Week", :start_date => (@date.end_of_week+1) %>
+        </div>
+      </td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @daily_counters.each do |dc| %>
+    <tr>
+      <td>
+        <center>
+          <%= render "content_modal_by_hour", :dc => dc %>
+          <%= render "content_modal_by_file", :dc => dc %>
+        </center>
+      </td>
+      <td><%= display_date(dc.calldate) %></td>
+      <td><%= number_with_delimiter(dc.sum_input, :delimiter => ",") %></td>
+      <td><%= number_with_delimiter(dc.sum_output, :delimiter => ",") %></td>
+      <td><%= number_with_delimiter(dc.sum_merged, :delimiter => ",") %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
